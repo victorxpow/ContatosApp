@@ -26,13 +26,19 @@
       },
       "/home/victorpow/workspace/ContatosApp/app/controllers/application_controller.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
+      },
+      "/home/victorpow/workspace/ContatosApp/app/controllers/home_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1598242540
+    "timestamp": 1598242966
   }
 }
