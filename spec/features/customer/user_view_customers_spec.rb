@@ -7,7 +7,7 @@ feature 'User view client' do
 
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Cliente'
+    click_on 'Clientes'
 
     expect(page).to have_content(customer.name)
     expect(page).to have_content(customer.email)
