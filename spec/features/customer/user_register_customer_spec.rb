@@ -17,3 +17,4 @@ feature 'User create costumer' do
     expect(page).to have_content('douglas@gmail.com')
     expect(page).to have_content('(42) 4242-4242')
   end
+end
