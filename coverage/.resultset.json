@@ -1,0 +1,24 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/victorpow/workspace/ContatosApp/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/victorpow/workspace/ContatosApp/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1598240945
+  }
+}
