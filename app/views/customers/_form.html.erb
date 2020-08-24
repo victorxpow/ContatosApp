@@ -1,0 +1,12 @@
+<%= form_with model: @customer, local: true do |f| %>
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name, placeholder: 'Nome do cliente'  %>
+
+  <%= f.label :email, 'E-mail' %>
+  <%= f.text_field :email, placeholder: 'E-mail do cliente'  %>
+
+  <%= f.label :phone, 'Telefone' %>
+  <%= f.text_field :phone, placeholder: 'Telefone do cliente'  %>
+
+  <%= f.submit 'Salvar' %>
+<% end %>
