@@ -18,6 +18,12 @@
           null
         ]
       },
+      "/home/victorpow/workspace/ContatosApp/app/models/contact.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/victorpow/workspace/ContatosApp/app/models/customer.rb": {
         "lines": [
           1,
@@ -35,6 +41,59 @@
           1,
           1,
           1,
+          null
+        ]
+      },
+      "/home/victorpow/workspace/ContatosApp/app/controllers/contacts_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          7,
+          null,
+          null,
           null
         ]
       },
@@ -92,6 +151,6 @@
         ]
       }
     },
-    "timestamp": 1598249334
+    "timestamp": 1598306811
   }
 }

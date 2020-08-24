@@ -1,0 +1,8 @@
+<% @contacts.each do |contact| %>
+      <tr id="contact-<%= contact.id %>">
+        <td><%= link_to contact.name, contact %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.email %></td>
+<% end %>
+
+<%= link_to 'Registrar Novo', new_contact_path  %>

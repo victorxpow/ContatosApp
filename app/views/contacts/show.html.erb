@@ -1,0 +1,22 @@
+<h2>Contato</h2>
+
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @contact.name %></td>
+      <td><%= @contact.email %></td>
+      <td><%= @contact.phone %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to 'Editar', edit_contact_path %>
+<%= link_to 'Apagar', contact_path(@contact), method: :delete,
+data: { confirm: "Tem certeza de que deseja deletar #{@contact.name}?"} %>
+<%= link_to 'Voltar', contacts_path %>
