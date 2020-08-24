@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User create costumer' do
+feature 'User create customer' do
   scenario 'Successfully' do
     user = create(:user)
 
