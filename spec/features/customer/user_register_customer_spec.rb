@@ -6,7 +6,7 @@ feature 'User create customer' do
 
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Clientes'
+    click_on 'Lista de Clientes'
     click_on 'Registrar Novo'
     fill_in 'Nome', with: 'Douglas Adams'
     fill_in 'E-mail', with: 'douglas@gmail.com'

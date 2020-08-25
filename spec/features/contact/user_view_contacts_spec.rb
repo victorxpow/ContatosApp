@@ -7,7 +7,7 @@ feature 'User view contacts' do
 
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Contatos'
+    click_on 'Listas de Contatos'
 
     expect(page).to have_content(contact.name)
     expect(page).to have_content(contact.email)

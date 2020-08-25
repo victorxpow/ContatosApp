@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :find_customer, only: %i[show edit update destroy]
+  before_action :find_customer, only: %i[show edit update addcontact destroy]
 
   def index
     @customers = Customer.all
@@ -21,7 +21,9 @@ class CustomersController < ApplicationController
   def show; end
 
   def edit; end
-  
+
+  def addcontact; end
+
   def update
     if @customer.update(customer_params)
       redirect_to @customer, notice: 'Cliente editado com sucesso!'

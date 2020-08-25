@@ -1,33 +1,22 @@
 <%= form_with model: @customer, local: true do |f| %>
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <%= f.label :name, 'Nome' %>
-        <%= f.text_field :name, class:'form-control', placeholder: 'Nome do cliente'  %>
-      </div>
-      <div class='form-group col-md-6'>
-        <%= f.label :phone, 'Telefone' %>
-        <%= f.text_field :phone, class:'form-control', placeholder: 'Telefone do cliente'  %>
-      </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= f.label :name, 'Nome' %>
+      <%= f.text_field :name, class:'form-control', placeholder: 'Nome do cliente'  %>
     </div>
-      <div class='form-group'>
-        <%= f.label :email, 'E-mail' %>
-        <%= f.text_field :email, class:'form-control', placeholder: 'E-mail do cliente'  %>
-      </div>
-
-  <div class="form-group">
-      <%= f.label :contacts, 'Contatos', class:"form-check-label", for:"gridCheck" %>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-    <%= collection_check_boxes :customer, :contact_ids, Contact.order(:name), :id, :name, class:"form-check-input", type:"checkbox", id:"gridCheck"  %>
-      </label>
+    <div class='form-group col-md-6'>
+      <%= f.label :phone, 'Telefone' %>
+      <%= f.text_field :phone, class:'form-control', placeholder: 'Telefone do cliente'  %>
     </div>
   </div>
-    <div>
-      <div class='ls-actions-btn' >
-          <%= f.submit 'Salvar', class: "btn btn-primary btn-sm" %>
-          <%= link_to 'Cancelar', url_for(:back), class:"btn btn-secondary btn-sm" %>
-      </div>
+    <div class='form-group'>
+      <%= f.label :email, 'E-mail' %>
+      <%= f.text_field :email, class:'form-control', placeholder: 'E-mail do cliente'  %>
     </div>
-  </form>
+  <div>
+    <div class='ls-actions-btn' >
+        <%= f.submit 'Salvar', class: "btn btn-primary btn-sm" %>
+        <%= link_to 'Cancelar', url_for(:back), class:"btn btn-secondary btn-sm" %>
+    </div>
+  </div>
 <% end %>

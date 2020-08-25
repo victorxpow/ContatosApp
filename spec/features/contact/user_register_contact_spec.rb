@@ -6,7 +6,7 @@ feature 'User create contacts' do
 
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Contatos'
+    click_on 'Listas de Contatos'
     click_on 'Registrar Novo'
     fill_in 'Nome', with: 'Albus'
     fill_in 'E-mail', with: 'albus@gmail.com'

@@ -7,7 +7,7 @@ feature 'User edit customer' do
 
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Clientes'
+    click_on 'Lista de Clientes'
     click_on customer.name
     click_on 'Editar'
     fill_in 'Nome', with: 'George R R Martin'

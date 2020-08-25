@@ -21,6 +21,8 @@
 
 <% if @customer.contacts.empty?  %>
 "Não há contatos registrados."
+<br/>
+
 <% else %>
 <h2>Contatos associados</h2>
 
@@ -43,8 +45,8 @@
 </table>
 <% end %>
 
-<%= link_to 'Editar', edit_customer_path, class: "btn btn-outline-primary" %>
+<%= link_to 'Editar', edit_customer_path, class: "btn btn-outline-warning" %>
 <%= link_to 'Apagar', customer_path(@customer), method: :delete, class: "btn btn-outline-danger",
 data: { confirm: "Tem certeza de que deseja deletar #{@customer.name}?"} %>
 <%= link_to 'Voltar', customers_path, class: "btn btn-outline-secondary" %>
-
+<%= link_to 'Adicionar contato', addcontact_customer_path, class: 'btn btn-outline-primary' %>
