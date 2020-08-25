@@ -4,11 +4,11 @@ class CustomersController < ApplicationController
   def index
     @customers = Customer.all
   end
-
+  
   def new
     @customer = Customer.new
   end
-
+  
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
@@ -17,12 +17,14 @@ class CustomersController < ApplicationController
       render :new
     end
   end
-
+  
   def show; end
-
+  
   def edit; end
-
-  def addcontact; end
+  
+  def addcontact
+    @contacts = Contact.all
+  end
 
   def update
     if @customer.update(customer_params)

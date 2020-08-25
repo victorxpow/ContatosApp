@@ -10,7 +10,7 @@ feature 'User delete contact' do
 
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Listas de Contatos'
+    click_on 'Lista de Contatos'
     click_on contact.name
     click_on 'Apagar'
 

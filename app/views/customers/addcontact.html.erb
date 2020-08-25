@@ -1,3 +1,6 @@
+<% if @contacts.empty?  %>
+"Não há contatos disponiveis"
+<% else %>
 <%= form_with model: @customer, local: true do |f| %>
   <div class="container" style="margin-top:20px;">
     <div class="row">
@@ -19,4 +22,5 @@
       </div>
     </div>
   </div>
+<% end %>
 <% end %>

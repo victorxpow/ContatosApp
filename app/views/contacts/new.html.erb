@@ -1,3 +1,12 @@
 <h1> Novo Contato </h1>
 
-<%= render partial: 'form', locals: { customer: @contact } %>
+<% if @contact.errors.any? %>
+  <% @contact.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger" role="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<%= render partial: 'form', locals: { contact: @contact } %>
