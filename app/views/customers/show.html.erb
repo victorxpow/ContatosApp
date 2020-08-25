@@ -1,13 +1,12 @@
 <h2>Cliente</h2>
 
-<table class="ls-table">
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
       <th>Nome</th>
       <th>Email</th>
       <th>Telefone</th>
       <th>Data de Registro</th>
-      <th>Contatos</th>
     </tr>
   </thead>
   <tbody>
@@ -16,13 +15,36 @@
       <td><%= @customer.email %></td>
       <td><%= @customer.phone %></td>
       <td><%= @customer.created_at %></td>
-      <td><% @customer.contacts.each do |contact| %></td>
-      <td><%= link_to contact.name, contact %></td>
-      <% end %>
     </tr>
   </tbody>
 </table>
-<%= link_to 'Editar', edit_customer_path %>
-<%= link_to 'Apagar', customer_path(@customer), method: :delete,
+
+<% if @customer.contacts.empty?  %>
+"Não há contatos registrados."
+<% else %>
+<h2>Contatos associados</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customer.contacts.each do |contact| %>
+      <tr id="customer-contact-<%= contact.id %>">
+        <td><%= contact.name %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.email %></td>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+<%= link_to 'Editar', edit_customer_path, class: "btn btn-outline-primary" %>
+<%= link_to 'Apagar', customer_path(@customer), method: :delete, class: "btn btn-outline-danger",
 data: { confirm: "Tem certeza de que deseja deletar #{@customer.name}?"} %>
-<%= link_to 'Voltar', customers_path %>
+<%= link_to 'Voltar', customers_path, class: "btn btn-outline-secondary" %>
+

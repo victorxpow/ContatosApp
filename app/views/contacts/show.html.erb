@@ -1,7 +1,7 @@
 <h2>Contato</h2>
 
-<table class="ls-table">
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
       <th>Nome</th>
       <th>Email</th>
@@ -16,7 +16,7 @@
     </tr>
   </tbody>
 </table>
-<%= link_to 'Editar', edit_contact_path %>
-<%= link_to 'Apagar', contact_path(@contact), method: :delete,
+<%= link_to 'Editar', edit_contact_path, class: "btn btn-outline-primary" %>
+<%= link_to 'Apagar', contact_path(@contact), method: :delete, class: "btn btn-outline-danger",
 data: { confirm: "Tem certeza de que deseja deletar #{@contact.name}?"} %>
-<%= link_to 'Voltar', contacts_path %>
+<%= link_to 'Voltar', contacts_path, class: "btn btn-outline-secondary" %>

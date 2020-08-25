@@ -1,9 +1,21 @@
-<% @customers.each do |customer| %>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Data de Registro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
       <tr id="customer-<%= customer.id %>">
         <td><%= link_to customer.name, customer %></td>
         <td><%= customer.phone %></td>
         <td><%= customer.email %></td>
         <td><%= customer.created_at %></td>
-<% end %>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to 'Registrar Novo', new_customer_path  %>
+<%= link_to 'Registrar Novo', new_customer_path, class: "btn btn-primary btn-sm"  %>

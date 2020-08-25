@@ -1,14 +1,33 @@
 <%= form_with model: @customer, local: true do |f| %>
-  <%= f.label :name, 'Nome' %>
-  <%= f.text_field :name, placeholder: 'Nome do cliente'  %>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :name, 'Nome' %>
+        <%= f.text_field :name, class:'form-control', placeholder: 'Nome do cliente'  %>
+      </div>
+      <div class='form-group col-md-6'>
+        <%= f.label :phone, 'Telefone' %>
+        <%= f.text_field :phone, class:'form-control', placeholder: 'Telefone do cliente'  %>
+      </div>
+    </div>
+      <div class='form-group'>
+        <%= f.label :email, 'E-mail' %>
+        <%= f.text_field :email, class:'form-control', placeholder: 'E-mail do cliente'  %>
+      </div>
 
-  <%= f.label :email, 'E-mail' %>
-  <%= f.text_field :email, placeholder: 'E-mail do cliente'  %>
-
-  <%= f.label :phone, 'Telefone' %>
-  <%= f.text_field :phone, placeholder: 'Telefone do cliente'  %>
-
-  <%= f.label :contacts, 'Contatos' %>
-<%= collection_check_boxes :customer, :contact_ids, Contact.order(:name), :id, :name  %>
-  <%= f.submit 'Salvar' %>
+  <div class="form-group">
+      <%= f.label :contacts, 'Contatos', class:"form-check-label", for:"gridCheck" %>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+    <%= collection_check_boxes :customer, :contact_ids, Contact.order(:name), :id, :name, class:"form-check-input", type:"checkbox", id:"gridCheck"  %>
+      </label>
+    </div>
+  </div>
+    <div>
+      <div class='ls-actions-btn' >
+          <%= f.submit 'Salvar', class: "btn btn-primary btn-sm" %>
+          <%= link_to 'Cancelar', url_for(:back), class:"btn btn-secondary btn-sm" %>
+      </div>
+    </div>
+  </form>
 <% end %>
