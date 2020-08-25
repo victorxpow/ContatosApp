@@ -8,5 +8,7 @@
   <%= f.label :phone, 'Telefone' %>
   <%= f.text_field :phone, placeholder: 'Telefone do cliente'  %>
 
+  <%= f.label :contacts, 'Contatos' %>
+<%= collection_check_boxes :customer, :contact_ids, Contact.order(:name), :id, :name  %>
   <%= f.submit 'Salvar' %>
 <% end %>

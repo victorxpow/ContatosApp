@@ -7,6 +7,7 @@
       <th>Email</th>
       <th>Telefone</th>
       <th>Data de Registro</th>
+      <th>Contatos</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,9 @@
       <td><%= @customer.email %></td>
       <td><%= @customer.phone %></td>
       <td><%= @customer.created_at %></td>
+      <td><% @customer.contacts.each do |contact| %></td>
+      <td><%= link_to contact.name, contact %></td>
+      <% end %>
     </tr>
   </tbody>
 </table>

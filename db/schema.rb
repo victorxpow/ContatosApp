@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_213655) do
+ActiveRecord::Schema.define(version: 2020_08_24_224937) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2020_08_24_213655) do
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "customer_contacts", force: :cascade do |t|
+    t.integer "customer_id", null: false
+    t.integer "contact_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contact_id"], name: "index_customer_contacts_on_contact_id"
+    t.index ["customer_id"], name: "index_customer_contacts_on_customer_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -40,4 +49,6 @@ ActiveRecord::Schema.define(version: 2020_08_24_213655) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "customer_contacts", "contacts"
+  add_foreign_key "customer_contacts", "customers"
 end

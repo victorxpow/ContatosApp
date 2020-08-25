@@ -21,11 +21,23 @@
       "/home/victorpow/workspace/ContatosApp/app/models/contact.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/victorpow/workspace/ContatosApp/app/models/customer_contact.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       },
       "/home/victorpow/workspace/ContatosApp/app/models/customer.rb": {
         "lines": [
+          1,
+          1,
           1,
           null
         ]
@@ -151,6 +163,6 @@
         ]
       }
     },
-    "timestamp": 1598306811
+    "timestamp": 1598310491
   }
 }

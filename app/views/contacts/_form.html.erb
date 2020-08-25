@@ -1,4 +1,4 @@
-<%= form_with model: @contact, local: true do |f| %>
+<%= form_with model: @contact, class: 'ls-form ls-form-horizontal row', local: true do |f| %>
   <%= f.label :name, 'Nome' %>
   <%= f.text_field :name, placeholder: 'Nome do contato'  %>
 
@@ -7,6 +7,10 @@
 
   <%= f.label :phone, 'Telefone' %>
   <%= f.text_field :phone, placeholder: 'Telefone do contato'  %>
-
-  <%= f.submit 'Salvar' %>
+  <div class="button">
+    <div class='ls-actions-btn button'>
+  <%= f.submit 'Salvar', class: 'ls-btn', style: "color: rgb(79, 89, 216);" %>
+   <%= link_to 'Voltar', url_for(:back), class:"ls-btn" %>
+      </div>
+  </div>
 <% end %>

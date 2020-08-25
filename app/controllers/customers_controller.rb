@@ -1,5 +1,4 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_user!
   before_action :find_customer, only: %i[show edit update destroy]
 
   def index
@@ -39,7 +38,7 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
-    params.require(:customer).permit(:name, :email, :phone)
+    params.require(:customer).permit(:name, :email, :phone, :contact_ids => [])
   end
   
   def find_customer
